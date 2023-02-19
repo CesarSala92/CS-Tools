@@ -5,13 +5,6 @@
 
 ### <div align="center">CS-Tools es un conjunto de herramientas diseñadas para pyRevit</div>  
   
-
-- 🔭Aislar temporalmente subproyectos  
-  
-
-- Proximamente.  
-  
-
 <br/>  
 
 
