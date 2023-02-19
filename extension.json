@@ -1,0 +1,14 @@
+{
+    "builtin": "False",
+    "default_enabled": "True",
+    "type": "extension",
+    "rocket_mode_compatible": "False",
+    "name": "CS_Tools",
+    "description": "Extensiones para pyRevit",
+    "author": "César Sala",
+    "author_profile": "https://github.com/CesarSala92",
+    "url": "https://github.com/CesarSala92/CS-Tools.git",
+    "website": "https://github.com/CesarSala92",
+    "image": "",
+    "dependencies": []
+}
