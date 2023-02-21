@@ -112,12 +112,16 @@ def visibilidad_seleccionar_elementos(lista):
 #--------------------UI---------------------
 
 ops = (FilteredWorksetCollector(doc).OfKind(WorksetKind.UserWorkset).ToWorksets())
-res = forms.SelectFromList.show(ops,
+dict_ops = {view.Name: view for view in ops}
+res = forms.SelectFromList.show(sorted(dict_ops),
                                 multiselect= True,
-                                name_attr='Name',
+                                #name_attr='Name',
                                 button_name='Seleccionar Subproyecto')
 
-nombre_sub = [item.Name for item in res]
+if not res:
+    forms.alert('No se ha seleccionado ningun subproyecto', exitscript=True)
+
+nombre_sub = [item for item in res]
 
 
 #--------------------CODIGO---------------------
