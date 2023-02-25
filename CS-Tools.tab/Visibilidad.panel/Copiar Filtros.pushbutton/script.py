@@ -2,11 +2,12 @@
 
 __title__ = "Copiar \nfiltros"
 __autor__ = "César Sala Gago"
-__doc__ = """Copia filtros de una vista a otra.
+__doc__ = """Copia filtros de una vista a una o varias vistas seleccionadas.
 
-Autor: César Sala Gago
-Versión: 01
-Fecha: 21/02/2023"""
+1- Selecciona la vista con los filtros que se quieren copiar.
+2- Selecciona los filtros.
+3- Selecciona las vistas de destino.
+"""
 
 
 #---------------IMPORTACIONES----------------

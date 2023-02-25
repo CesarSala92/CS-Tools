@@ -2,11 +2,7 @@
 
 __title__ = "Visibilidad \nSubproyectos"
 __autor__ = "César Sala Gago"
-__doc__ = """Aisla temporalmente los subproyectos seleccionados.
-
-Autor: César Sala Gago
-Versión: 01
-Fecha: 21/02/2023"""
+__doc__ = """Desactiva todos los subproyectos de la vista actual, dejando solo los seleccionados como visibles."""
 
 
 #---------------IMPORTACIONES----------------

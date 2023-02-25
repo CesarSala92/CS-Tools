@@ -2,11 +2,8 @@
 
 __title__ = "Aislar \nSubproyectos"
 __autor__ = "César Sala Gago"
-__doc__ = """Aisla temporalmente los subproyectos seleccionados.
-
-Autor: César Sala Gago
-Versión: 01
-Fecha: 19/02/2023"""
+__doc__ = """Aísla temporalmente los subproyectos seleccionado.
+"""
 
 
 #---------------IMPORTACIONES----------------
