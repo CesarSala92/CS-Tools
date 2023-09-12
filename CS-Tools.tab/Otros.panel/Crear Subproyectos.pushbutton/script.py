@@ -7,7 +7,6 @@ __doc__ = """Crea subproyectos a partir de un archivo .txt con los nombres separ
 
 
 #---------------IMPORTACIONES----------------
-
 import clr
 
 clr.AddReference("RevitAPI")
@@ -17,8 +16,6 @@ from Autodesk.Revit.DB import *
 clr.AddReference("RevitServices")
 from RevitServices.Persistence import *
 from RevitServices.Transactions import *
-
-
 
 import System
 from System.Collections.Generic import *
@@ -32,7 +29,8 @@ doc = __revit__.ActiveUIDocument.Document
 
 
 #-----------------FUNCIONES-------------------
-
+coleccion = (FilteredWorksetCollector(doc).OfKind(WorksetKind.UserWorkset).ToWorksets())
+listaColeccion = (sub.Name for sub in coleccion)
 listaSubproyectos = list()
 if doc.IsWorkshared:
     archivoBase = forms.pick_file(file_ext='txt')
@@ -48,7 +46,8 @@ if doc.IsWorkshared:
         with Transaction(doc, __title__) as t:
             t.Start()
             for subproyecto in listaSubproyectos:
-                nuevoSubproyecto = Workset.Create(doc, subproyecto)
+                if subproyecto not in listaColeccion:
+                    nuevoSubproyecto = Workset.Create(doc, subproyecto)
             t.Commit()
 
     else:
